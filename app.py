@@ -66,22 +66,22 @@ if D > 0 and S > 0 and H > 0:
     st.write(f"📦 Jumlah Pemesanan per Tahun: `{num_orders:.2f}` kali")
     st.write(f"💰 Total Biaya Persediaan Tahunan: `Rp {total_cost:,.2f}`")
 
-    # ----------------------------
-    # Visualisasi Grafik
-    # ----------------------------
-    st.subheader("📉 Grafik Total Biaya vs Jumlah Pesanan")
+# ----------------------------
+# Visualisasi Grafik
+# ----------------------------
+st.subheader("📉 Grafik Total Biaya vs Jumlah Pesanan")
 
-    Q_range = np.linspace(1, 2 * EOQ, 100)
-    TC_range = (D / Q_range) * S + (Q_range / 2) * H
+Q_range = np.linspace(1, 2 * EOQ, 100)
+TC_range = (D / Q_range) * S + (Q_range / 2) * H
 
-    fig, ax = plt.subplots()
-    ax.plot(Q_range, TC_range, label="Total Cost", color="blue")
-    ax.axvline(EOQ, color="red", linestyle="--", label=f"EOQ = {EOQ:.2f}")
-    ax.set_xlabel("Jumlah Pesanan (Q)")
-    ax.set_ylabel("Total Biaya (Rp)")
-    ax.set_title("Total Cost vs Order Quantity")
-    ax.legend()
-    ax.grid(True)
+fig, ax = plt.subplots()
+ax.plot(Q_range, TC_range, label="Total Cost", color="blue")
+ax.axvline(EOQ, color="red", linestyle="--", label=f"EOQ = {EOQ:.2f}")
+ax.set_xlabel("Jumlah Pesanan (Q)")
+ax.set_ylabel("Total Biaya (Rp)")
+ax.set_title("Total Cost vs Order Quantity")
+ax.legend()
+ax.grid(True)
 
     st.pyplot(fig)
 else:
