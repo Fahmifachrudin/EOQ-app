@@ -30,9 +30,9 @@ st.sidebar.markdown("""
 # ----------------------------
 # Contoh Studi Kasus
 # ----------------------------
-with st.expander("📖 Contoh Studi Kasus Industri"):
+with st.expander("📖 Studi Kasus Industri 📖 "):
     st.markdown("""
-**PT. **, sebuah pabrik komponen otomotif, ingin mengoptimalkan pembelian baut baja untuk produksi:
+**PT. Megah Jaya Bersama **, sebuah pabrik komponen otomotif, ingin mengoptimalkan pembelian gulungan plat koil untuk produksi:
 
 - Permintaan tahunan: `12.000 unit`
 - Biaya pemesanan: `Rp 200.000` per pesanan
