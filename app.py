@@ -1,6 +1,5 @@
 import streamlit as st
 import numpy as np
-import math
 import matplotlib.pyplot as plt
 
 # ----------------------------
@@ -58,7 +57,7 @@ with col3:
 # Perhitungan EOQ
 # ----------------------------
 if D > 0 and S > 0 and H > 0:
-    EOQ = math.sqrt((2 * D * S) / H)
+    EOQ = np.sqrt((2 * D * S) / H)
     num_orders = D / EOQ
     total_cost = (D / EOQ) * S + (EOQ / 2) * H
 
