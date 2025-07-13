@@ -69,20 +69,20 @@ if D > 0 and S > 0 and H > 0:
 # ----------------------------
 # Visualisasi Grafik
 # ----------------------------
-st.subheader("📉 Grafik Total Biaya vs Jumlah Pesanan")
+    st.subheader("📉 Grafik Total Biaya vs Jumlah Pesanan")
 
-Q_range = np.linspace(1, 2 * EOQ, 100)
-TC_range = (D / Q_range) * S + (Q_range / 2) * H
+    Q_range = np.linspace(1, 2 * EOQ, 100)
+    TC_range = (D / Q_range) * S + (Q_range / 2) * H
 
-fig, ax = plt.subplots()
-ax.plot(Q_range, TC_range, label="Total Cost", color="blue")
-ax.axvline(EOQ, color="red", linestyle="--", label=f"EOQ = {EOQ:.2f}")
-ax.set_xlabel("Jumlah Pesanan (Q)")
-ax.set_ylabel("Total Biaya (Rp)")
-ax.set_title("Total Cost vs Order Quantity")
-ax.legend()
-ax.grid(True)
+    fig, ax = plt.subplots()
+    ax.plot(Q_range, TC_range, label="Total Cost", color="blue")
+    ax.axvline(EOQ, color="red", linestyle="--", label=f"EOQ = {EOQ:.2f}")
+    ax.set_xlabel("Jumlah Pesanan (Q)")
+    ax.set_ylabel("Total Biaya (Rp)")
+    ax.set_title("Total Cost vs Order Quantity")
+    ax.legend()
+    ax.grid(True)
 
-st.pyplot(fig)
+    st.pyplot(fig)
 else:
     st.warning("Silakan isi semua parameter dengan nilai lebih dari 0.")
