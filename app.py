@@ -83,6 +83,6 @@ ax.set_title("Total Cost vs Order Quantity")
 ax.legend()
 ax.grid(True)
 
-    st.pyplot(fig)
+st.pyplot(fig)
 else:
     st.warning("Silakan isi semua parameter dengan nilai lebih dari 0.")
