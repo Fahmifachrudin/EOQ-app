@@ -32,7 +32,7 @@ st.sidebar.markdown("""
 # ----------------------------
 with st.expander("📖 Contoh Studi Kasus Industri"):
     st.markdown("""
-**PT. Mekar Jaya**, sebuah pabrik komponen otomotif, ingin mengoptimalkan pembelian baut baja untuk produksi:
+**PT. **, sebuah pabrik komponen otomotif, ingin mengoptimalkan pembelian baut baja untuk produksi:
 
 - Permintaan tahunan: `12.000 unit`
 - Biaya pemesanan: `Rp 200.000` per pesanan
@@ -57,7 +57,7 @@ with col3:
 # Perhitungan EOQ
 # ----------------------------
 if D > 0 and S > 0 and H > 0:
-    EOQ = np.sqrt((2 * D * S) / H)
+    EOQ = math.sqrt((2 * D * S) / H)
     num_orders = D / EOQ
     total_cost = (D / EOQ) * S + (EOQ / 2) * H
 
